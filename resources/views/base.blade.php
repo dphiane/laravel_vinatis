@@ -18,6 +18,7 @@
 <body>
     <div class="max-w-screen-xl m-auto">
 
+        <x-header/>        
         <x-navigation />
         
         <main>

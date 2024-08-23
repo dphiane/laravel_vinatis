@@ -3,8 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegionController;
+use App\Http\Middleware\AdminMiddleware;
 
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class,'index'])->name('home');
+
+Route::middleware(AdminMiddleware::class)->group(function () {
+    Route::resource('region', RegionController::class);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

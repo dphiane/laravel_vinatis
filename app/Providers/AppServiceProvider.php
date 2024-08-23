@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Region;
+use App\Policies\RegionPolicy;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

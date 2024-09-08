@@ -20,6 +20,6 @@ class AdminMiddleware
             return $next($request);
         }
 
-        return redirect('/')->with('message','Vous n\'êtes pas autorisé à accéder à cette page');
+        return redirect('/')->with('warning','Vous n\'êtes pas autorisé à accéder à cette page');
     }
 }

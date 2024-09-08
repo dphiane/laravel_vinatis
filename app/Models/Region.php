@@ -10,4 +10,9 @@ class Region extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function wines()
+    {
+        return $this->hasMany(wine::class);
+    }
 }
